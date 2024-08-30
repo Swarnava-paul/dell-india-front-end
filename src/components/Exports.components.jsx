@@ -7,6 +7,7 @@ import UserAccountMenuModal from "./UserAccountMenu.Modal";
 import HomeFirstImageSlider from "./Home/HomeFirstImageSlider";
 import HomeSecondSection from "./Home/HomeSecondSection";
 import HomeThirdSection from "./Home/HomeThirdSection";
+import HomeFourthSection from "./Home/HomeFourthSection";
 export {
 Navbar,
 Footer,
@@ -16,5 +17,6 @@ HamburgerMenu,
 UserAccountMenuModal,
 HomeFirstImageSlider,
 HomeSecondSection,
-HomeThirdSection
+HomeThirdSection,
+HomeFourthSection
 }

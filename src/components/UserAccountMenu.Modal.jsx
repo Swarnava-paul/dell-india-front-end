@@ -15,7 +15,6 @@ const UserAccountMenuModal = ({user}) => {
     window.location.href=url;
    } catch(error) {
     //navigate('/error')
-    
    }
   } // we will call this function later on sign in button on users menu
 

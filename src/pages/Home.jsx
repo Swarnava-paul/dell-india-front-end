@@ -1,5 +1,9 @@
-import { HomeFirstImageSlider
-, HomeSecondSection , HomeThirdSection} from "../components/Exports.components"
+import {
+  HomeFirstImageSlider
+ ,HomeSecondSection 
+ ,HomeThirdSection,
+ HomeFourthSection
+} from "../components/Exports.components" 
 
 const Home = () => {
   return (
@@ -7,6 +11,7 @@ const Home = () => {
    <HomeFirstImageSlider/>
    <HomeSecondSection/>
    <HomeThirdSection/>
+   <HomeFourthSection/>
    </>
   )
 }
