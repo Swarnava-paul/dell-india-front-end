@@ -1,6 +1,8 @@
 import { Grid } from "@chakra-ui/react"
 import { useState  } from "react"
-import {EachSectionOfFooter} from '../components/Exports.components'
+import {EachSectionOfFooter ,
+ResponsiveFooterSmallScreens
+} from '../components/Exports.components'
 
 const Footer = () => {
   const [footerMenus,setFooterMenus] = useState([
@@ -37,13 +39,19 @@ const Footer = () => {
     <>
     <Grid bg='whitesmoke' w='100%' templateColumns='repeat(3,32%)'
      justifyContent='center' rowGap={6} columnGap={3}
-     p={10} h='auto'  pb='120px'>
+     p={10} h='auto'  pb='120px' display={['none','none','grid','grid']}>
       {
        footerMenus.map((i,index)=>(
         <EachSectionOfFooter key={index} props={i}/>
        ))
       }
     </Grid>
+
+   <Grid display={['grid','grid','none','none']} gap={4} bg='#F5F5F5'>
+    {footerMenus.map((i,index)=>(
+      <ResponsiveFooterSmallScreens key={index} props={i}/>
+    ))}
+   </Grid>
     </>
   )
 }

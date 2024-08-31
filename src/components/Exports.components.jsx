@@ -9,6 +9,8 @@ import HomeSecondSection from "./Home/HomeSecondSection";
 import HomeThirdSection from "./Home/HomeThirdSection";
 import HomeFourthSection from "./Home/HomeFourthSection";
 import EachSectionOfFooter from "./Footer/EachSectionOfFooter";
+import { ResponsiveFooterSmallScreens } from "./Footer/EachSectionOfFooter";
+
 export {
 Navbar,
 Footer,
@@ -20,5 +22,6 @@ HomeFirstImageSlider,
 HomeSecondSection,
 HomeThirdSection,
 HomeFourthSection,
-EachSectionOfFooter
+EachSectionOfFooter,
+ResponsiveFooterSmallScreens
 }
