@@ -10,7 +10,8 @@ import HomeThirdSection from "./Home/HomeThirdSection";
 import HomeFourthSection from "./Home/HomeFourthSection";
 import EachSectionOfFooter from "./Footer/EachSectionOfFooter";
 import { ResponsiveFooterSmallScreens } from "./Footer/EachSectionOfFooter";
-
+import FilterHolder from "./ProductListingPage/FilterHolder";
+import EachSections from "./ProductListingPage/EachSections";
 export {
 Navbar,
 Footer,
@@ -23,5 +24,7 @@ HomeSecondSection,
 HomeThirdSection,
 HomeFourthSection,
 EachSectionOfFooter,
-ResponsiveFooterSmallScreens
+ResponsiveFooterSmallScreens,
+FilterHolder,
+EachSections
 }

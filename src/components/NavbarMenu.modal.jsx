@@ -14,7 +14,7 @@ const NavbarMenuModal = ({menuList,listPosition}) => {
     }} 
    onMouseLeave={()=>dispatch(hideNavbarMenuModal())}
     w='20%' height='auto' borderRadius={4} maxHeight='60vh'
-     bg='white'  ml={`${listPosition}%`}  pl={4} border='4px solid grey'>
+     bg='white'  ml={`${listPosition}%`}  pl={4} border='2px solid grey'>
      {
         menuList.map((i,index)=>(
             <Text key={index} cursor='pointer'>{i} <i style={{fontSize:"10px"}} className="fa-solid fa-chevron-right"></i></Text>

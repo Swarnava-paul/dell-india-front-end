@@ -1,5 +1,6 @@
 import { Grid , Image , Box  , Text} from "@chakra-ui/react"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const HomeSecondSection = () => {
 
@@ -34,10 +35,12 @@ const [images,setImages] = useState(
 const EachCart = ({imageUrl,text}) => {
 
     return (
+       <Link to='/productListingPage'>
         <Box bg='#F5F7F8'>
             <Text color='white' position='absolute' bg='black' p={[1,1,1,3]}>{text}</Text>
             <Image src={imageUrl}/>
         </Box>
+       </Link>
     )
 }
 

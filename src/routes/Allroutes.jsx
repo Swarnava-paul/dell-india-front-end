@@ -6,8 +6,9 @@ import React from "react";
 const Home = React.lazy(()=>import('../pages/Home'));
 const Cart = React.lazy(()=>import('../pages/Cart'));
 const MyAccount = React.lazy(()=>import('../pages/MyAccount'));
-const SelectedSeries = React.lazy(()=>import('../pages/SelectedSeries'));
+const SelectedSeries = React.lazy(()=>import('../pages/SelectedTypeLaptop'));
 const PageNotFound = React.lazy(()=>import('../pages/PageNotFound'));
+const ProductListingPage = React.lazy(()=>import('../pages/ProductListingPage'))
 
 const AllRoutes = () => {
  
@@ -17,7 +18,8 @@ const AllRoutes = () => {
                 <Route path='/' element={<Home/>}/>
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/myAccount' element={<MyAccount/>}/>
-                <Route path="/series/:seriesName" element={<SelectedSeries/>}/>
+                <Route path='/productListingPage' element={<ProductListingPage/>}/>
+                <Route path="/selectedType/:type" element={<SelectedSeries/>}/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </Suspense>
