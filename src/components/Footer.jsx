@@ -49,7 +49,11 @@ const Footer = () => {
 
    <Grid display={['grid','grid','none','none']} gap={4} bg='#F5F5F5'>
     {footerMenus.map((i,index)=>(
-      <ResponsiveFooterSmallScreens key={index} props={i}/>
+      <ResponsiveFooterSmallScreens key={index} props={i}
+      hideIcon={<i className="fa-solid fa-angle-down"></i>} 
+      openIcon={<i className="fa-solid fa-angle-up"></i>}
+      paddingLeft={8}
+      />
     ))}
    </Grid>
     </>

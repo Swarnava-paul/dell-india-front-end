@@ -21,7 +21,7 @@ const EachSectionOfFooter = ({props}) => {
 }
 
 
-export const ResponsiveFooterSmallScreens = ({props}) => {
+export const ResponsiveFooterSmallScreens = ({props,hideIcon,openIcon,paddingLeft}) => {
 const [display,setDisplay] =  useState('hide');
 const {head,subMenu} = props;
   return (
@@ -31,7 +31,7 @@ const {head,subMenu} = props;
         <>
         <Flex  h='5vh'w='100%' p={8} align='center' justify='space-between' onClick={()=>setDisplay('display')}>
         <Text fontWeight='600' fontFamily='sans-serif' fontSize={16}>{head}</Text>
-        <i className="fa-solid fa-chevron-down"></i>
+        {hideIcon}
         </Flex>
         </>
       ) : (
@@ -40,9 +40,9 @@ const {head,subMenu} = props;
          justify='space-between' 
          onClick={()=>setDisplay('hide')}>
         <Text fontWeight='600' fontFamily='sans-serif' fontSize={16}>{head}</Text>
-        <i className="fa-solid fa-angle-up"></i>
+        {openIcon}
         </Flex>
-        <Grid pl={8} gap={3}>
+        <Grid pl={paddingLeft} gap={3}>
         {subMenu.map((i,index)=>(
             <Text key={index}>{i}</Text>
           ))}
