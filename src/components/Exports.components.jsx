@@ -8,6 +8,7 @@ import HomeFirstImageSlider from "./Home/HomeFirstImageSlider";
 import HomeSecondSection from "./Home/HomeSecondSection";
 import HomeThirdSection from "./Home/HomeThirdSection";
 import HomeFourthSection from "./Home/HomeFourthSection";
+import EachSectionOfFooter from "./Footer/EachSectionOfFooter";
 export {
 Navbar,
 Footer,
@@ -18,5 +19,6 @@ UserAccountMenuModal,
 HomeFirstImageSlider,
 HomeSecondSection,
 HomeThirdSection,
-HomeFourthSection
+HomeFourthSection,
+EachSectionOfFooter
 }

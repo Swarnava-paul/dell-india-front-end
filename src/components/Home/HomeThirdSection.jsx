@@ -21,7 +21,7 @@ const FirstGrid = () => {
     return (
         <>
         <Grid bg='RGBA(245, 246, 247, 0.1)' pr={0} pl={2} pb={2} gap={2}>
-            <Text>Best Seller</Text>
+            <Text fontSize='28px'>Best Seller</Text>
             <Flex display={['grid','grid','flex','flex']} gap={2}>
             <Image src='https://i.dell.com/sites/csimages/UberHomePage_Imagery/all/lattitue.png'/>
             <Text>Enjoy special prices on our best selling laptops.</Text>
