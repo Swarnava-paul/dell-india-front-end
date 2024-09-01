@@ -12,6 +12,12 @@ import EachSectionOfFooter from "./Footer/EachSectionOfFooter";
 import { ResponsiveFooterSmallScreens } from "./Footer/EachSectionOfFooter";
 import FilterHolder from "./ProductListingPage/FilterHolder";
 import EachSections from "./ProductListingPage/EachSections";
+import FilterGraphicsCard from "./ProductListingPage/Filters/FilterGraphicsCard";
+import FilterPrice from "./ProductListingPage/Filters/FilterPrice";
+import FilterProcessor from "./ProductListingPage/Filters/FilterProcessor";
+import FIlterRam from "./ProductListingPage/Filters/FIlterRam";
+import FilterStorage from "./ProductListingPage/Filters/FilterStorage";
+import ProductLine from "./ProductListingPage/Filters/ProductLine";
 export {
 Navbar,
 Footer,
@@ -26,5 +32,11 @@ HomeFourthSection,
 EachSectionOfFooter,
 ResponsiveFooterSmallScreens,
 FilterHolder,
-EachSections
+EachSections,
+FIlterRam,
+FilterGraphicsCard,
+FilterPrice,
+FilterProcessor,
+FilterStorage,
+ProductLine
 }

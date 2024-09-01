@@ -1,4 +1,4 @@
-import { Flex , Grid } from "@chakra-ui/react"
+import { Flex , Grid , Box } from "@chakra-ui/react"
 import { FilterHolder , EachSections} from "../components/Exports.components"
 import { useState } from "react"
 const ProductListingPage = () => {
@@ -26,8 +26,26 @@ const ProductListingPage = () => {
     }
   ])
   return (
-    <Flex w='100%' justify='space-between'pb={10} justifyContent='center'>
+    <Box>
+    <Grid w='90%' border='1px solid blue'
+    borderRadius={4} margin='auto' 
+    mt={8} h='5vh' display={['grid','grid','none','none']}>
+    <Flex justify='center' align='center'gap={4} color='blue'>
+    <i className="fa-solid fa-sliders"></i>
+      Filters
+    </Flex>
+    <Box mt={16} pos='absolute' bg='white' w='90%'>
+    <FilterHolder/>
+    </Box>
+    </Grid> {/** hold filter menu only visible for small screen sizes */}
+
+  
+    <Flex w='100%' pb={10}  justify='space-between' 
+    justifyContent='center' mt={8} gap={5}>
+       <Box display={['none','none','grid','grid']}
+        w='25%'>
        <FilterHolder/>
+       </Box>
        <Grid  w={['90%','90%','80%','70%']} rowGap={10}>
          {
           eachListings.map((i,index)=>(
@@ -36,7 +54,13 @@ const ProductListingPage = () => {
          }
        </Grid>
     </Flex>
+    </Box>
   )
 }
 
 export default ProductListingPage
+
+
+/***
+display={['none','none','grid','grid']}
+ */

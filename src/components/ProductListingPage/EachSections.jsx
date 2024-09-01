@@ -23,7 +23,7 @@ const EachSections = ({props,index}) => {
          h='6vh'
          w='50%'
          borderRadius={5}
-         bg='RGB(0, 99, 184)'>Shop {buttonName}</Button>
+         bg='RGB(0, 99, 184)' pos='static'>Shop {buttonName}</Button>
         </Link>
       </Grid>
       <Image src={imageUrl} w={['80%','65%','50%','50%']}/>
@@ -41,7 +41,7 @@ const EachSections = ({props,index}) => {
          h='6vh'
          w='50%'
          borderRadius={5}
-         bg='RGB(0, 99, 184)'>Shop {buttonName}</Button>
+         bg='RGB(0, 99, 184)' pos='static'>Shop {buttonName}</Button>
         </Link>
       </Grid>
       </>
