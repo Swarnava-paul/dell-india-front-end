@@ -36,9 +36,7 @@ const HomeFourthSection = () => {
 
      function handleResize  () {
       const windowWidth = window.innerWidth;
-      console.log(windowWidth);
-      
-        if(windowWidth > 1300) {
+        if(windowWidth > 1000) {
             setScrollMinus(900)
         } else if (windowWidth > 600 && windowWidth < 900) {
            setScrollMinus(700)
@@ -46,8 +44,6 @@ const HomeFourthSection = () => {
             setScrollMinus(300)
         }
       }
-console.log(scrollMinus);
-
 
       useEffect(()=>{
       handleResize();
@@ -69,6 +65,8 @@ console.log(scrollMinus);
             },4000)
 
     },[position,scrollMinus])
+    console.log(scrollMinus);
+    
 
   return (
     <Box w='100%' bg='RGB(20, 29, 40)' p={10}>

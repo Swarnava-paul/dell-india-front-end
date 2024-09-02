@@ -1,7 +1,15 @@
 import { Flex , Grid , Box } from "@chakra-ui/react"
 import { FilterHolder , EachSections} from "../components/Exports.components"
 import { useState } from "react"
+
+//redux
+import { useSelector  , useDispatch} from "react-redux"
+import { displayFilterMenu,hideFilterMenu } from "../app/Slices/Slices"
 const ProductListingPage = () => {
+
+  const filterMenuDisplayForSmallScreens = useSelector((state)=>state.Slice.filterMenu);
+  const dispatch = useDispatch();
+
   const [eachListings,setEachListings] = useState([
     {imageUrl:'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/laptop/xps/fy24-family-launch/prod-312204-apjc-laptop-xps-16-9640-14-9440-13-9340-800x620-pl-gr.png?fmt=png-alpha&wid=800&hei=620',
     head:'XPS Laptops',tagLine:'Creators & Creativity Starting at ₹1,55,289.97',description:"Power your passions with premium, precision-crafted laptops with innovative features.",buttonName:"XPS"},
@@ -26,22 +34,23 @@ const ProductListingPage = () => {
     }
   ])
   return (
-    <Box>
+    <>
     <Grid w='90%' border='1px solid blue'
-    borderRadius={4} margin='auto' 
-    mt={8} h='5vh' display={['grid','grid','none','none']}>
+    borderRadius={4} margin='auto'
+    mt={8}  display={['grid','grid','none','none']}
+    onClick={()=>dispatch(displayFilterMenu())}>
     <Flex justify='center' align='center'gap={4} color='blue'>
     <i className="fa-solid fa-sliders"></i>
       Filters
     </Flex>
-    <Box mt={16} pos='absolute' bg='white' w='90%'>
-    <FilterHolder/>
-    </Box>
-    </Grid> {/** hold filter menu only visible for small screen sizes */}
+    </Grid> {/** hold filter menu icon only visible for small screen sizes */}
 
-  
+    <Box mt={16} margin='auto' bg='white' w='90%' display={filterMenuDisplayForSmallScreens} pb='30%'>
+    <FilterHolder/>
+     </Box> {/** hold whole filter menu only visible for small screen sizes */}
+
     <Flex w='100%' pb={10}  justify='space-between' 
-    justifyContent='center' mt={8} gap={5}>
+    justifyContent='center' mt={8} gap={5} display={filterMenuDisplayForSmallScreens==='none'?'flex' :'none'}>
        <Box display={['none','none','grid','grid']}
         w='25%'>
        <FilterHolder/>
@@ -54,7 +63,7 @@ const ProductListingPage = () => {
          }
        </Grid>
     </Flex>
-    </Box>
+    </>
   )
 }
 

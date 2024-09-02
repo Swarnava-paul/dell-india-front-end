@@ -4,7 +4,8 @@ import NavbarMenuModal from "../../components/NavbarMenu.modal";
 const initialState = {
     hamburgerDisplay : 'none',
     userAccountModalDisplay : 'none',
-    navbarMenuModal : 'none'
+    navbarMenuModal : 'none',
+    filterMenu:'none'
 }
 
  const Slice = createSlice({
@@ -35,6 +36,14 @@ const initialState = {
 
      hideNavbarMenuModal : (state) => {
       state.navbarMenuModal = 'none'
+     },
+
+     displayFilterMenu : (state) => {
+      state.filterMenu = 'block'
+     },
+
+     hideFilterMenu : (state) => {
+      state.filterMenu = 'none'
      }
 
     }
@@ -46,7 +55,9 @@ export const {
    displayuserAccountModalDisplay,
    hideuserAccountModalDisplay,
    displayNavbarMenuModal,
-   hideNavbarMenuModal
+   hideNavbarMenuModal,
+   displayFilterMenu,
+   hideFilterMenu
 }  = Slice.actions;
 
 export default Slice.reducer;
