@@ -5,7 +5,7 @@ const FilterGraphicsCard = () => {
 
   const array  = [
     
-   ' AMD Graphics',
+   ' AMD',
     'NVIDIA',
     'NVIDIA GeForce',
     'Intel'

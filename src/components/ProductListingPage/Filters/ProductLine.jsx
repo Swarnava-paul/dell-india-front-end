@@ -8,15 +8,16 @@ const ProductLine = () => {
   const [productsModels,setProductModels] = useState([
     'XPS',
     'Latitude',
-    'Inspiron',
     'Vostro',
     'Alienware',
-    'G series'
+    'G series',
+    'Precision',
+    'Chromebook'
   ])
 
   return (
-   <Box h='35vh'>
-     <CheckBox array={productsModels} type={'model'} head={'Product Line'} />
+   <Box h='45vh'>
+     <CheckBox array={productsModels} type={'series'} head={'Product Line'} />
    </Box>
   )
 }

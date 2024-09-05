@@ -18,7 +18,7 @@ const EachSections = ({props,index}) => {
         <Text fontSize='30px' fontWeight='400'>{head}</Text>
         <Text fontWeight='500'>{tagLine}</Text>
         <Text>{description}</Text>
-        <Link to={`/selectedType/model ${buttonName}`}>
+        <Link to={`/selectedType/series-${buttonName}`}>
         <Button color='white'
          h='6vh'
          w='50%'
@@ -36,7 +36,7 @@ const EachSections = ({props,index}) => {
         <Text fontSize='30px' fontWeight='400'>{head}</Text>
         <Text fontWeight='500'>{tagLine}</Text>
         <Text>{description}</Text>
-        <Link to={`/selectedType/model ${buttonName}`}>
+        <Link to={`/selectedType/series-${buttonName}`}>
         <Button color='white'
          h='6vh'
          w='50%'

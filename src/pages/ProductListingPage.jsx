@@ -22,7 +22,7 @@ const ProductListingPage = () => {
     {imageUrl:'https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/cs2404g0018-700634-gl-cs-co-fy24q4-category-banner-aw-m16-r2-800x620-a.png'
     ,head:'Alienware Gaming Laptops',tagLine:'Immersive Gaming Experiences Starting at ₹1,55,490.01',description:"Experience high-performance gaming with iconic designs and intelligently engineered laptops.",buttonName:"AlienWare"},
     {imageUrl:'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/g-series-16-7630-laptop-lf-800x620.png?fmt=png-alpha&wid=800&hei=620'
-    ,head:'G Series Gaming Laptops',tagLine:'Gaming Performance Starting at ₹75,589.99',description:"Take your game to the next level with split-second responsiveness and dynamic gameplay.",buttonName:"G Series"},
+    ,head:'G Series Gaming Laptops',tagLine:'Gaming Performance Starting at ₹75,589.99',description:"Take your game to the next level with split-second responsiveness and dynamic gameplay.",buttonName:"G series"},
     {imageUrl:'https://i.dell.com/is/image/DellContent/content/dam/documents-and-videos/dv2/b2b/en/product-launch/precision/fy24-precision-5690-mobile-workstation-mlk/site-banners/bb2501g0010-gl-bb-fy24-mobile-workstation-precision-16-5690-mlk-site-banner-800x620-left.png?fmt=png-alpha&wid=800&hei=620'
     ,head:'Precision Mobile Workstations',tagLine:'Advanced Users & Applications',description:"Take your ideas to the next level with the world’s #1 workstations*; optimized for performance, reliability and user experience.",buttonName:"Precision"},
     {
@@ -30,7 +30,7 @@ const ProductListingPage = () => {
       head:'Chromebooks',
       tagLine:"Cloud-native Versatility",
       description:'Meet the needs of all levels of users with cloud-native security—for the virtual learning environment all the way to enterprise business level.',
-      buttonName:"ChromeBooks"
+      buttonName:"ChromeBook"
     }
   ])
   return (
@@ -51,10 +51,12 @@ const ProductListingPage = () => {
 
     <Flex w='100%' pb={10}  justify='space-between' 
     justifyContent='center' mt={8} gap={5} display={filterMenuDisplayForSmallScreens==='none'?'flex' :'none'}>
+      
        <Box display={['none','none','grid','grid']}
         w='25%'>
        <FilterHolder/>
        </Box>
+
        <Grid  w={['90%','90%','80%','70%']} rowGap={10}>
          {
           eachListings.map((i,index)=>(

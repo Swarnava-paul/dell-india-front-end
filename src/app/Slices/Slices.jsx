@@ -5,7 +5,8 @@ const initialState = {
     hamburgerDisplay : 'none',
     userAccountModalDisplay : 'none',
     navbarMenuModal : 'none',
-    filterMenu:'none'
+    filterMenu:'none',
+    AuthenticationState:false
 }
 
  const Slice = createSlice({
@@ -44,6 +45,14 @@ const initialState = {
 
      hideFilterMenu : (state) => {
       state.filterMenu = 'none'
+     },
+
+     AuthSuccessful : (state) => {
+      state.AuthenticationState = true
+     },
+
+     AuthFailed : (state) => {
+      state.AuthenticationState = false
      }
 
     }
@@ -57,7 +66,9 @@ export const {
    displayNavbarMenuModal,
    hideNavbarMenuModal,
    displayFilterMenu,
-   hideFilterMenu
+   hideFilterMenu,
+   AuthSuccessful,
+   AuthFailed
 }  = Slice.actions;
 
 export default Slice.reducer;

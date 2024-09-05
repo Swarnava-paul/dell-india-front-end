@@ -1,4 +1,5 @@
 import { border, Box , Flex , Image , Input , InputGroup} from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 
 import { SearchIcon } from "@chakra-ui/icons"
 import { HamburgerIcon } from "@chakra-ui/icons"
@@ -9,13 +10,16 @@ import { useSearchParams } from "react-router-dom"
 import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 // redux 
-import { useDispatch } from "react-redux"
+import { useDispatch , useSelector } from "react-redux"
 import { displayHamburgerMenu ,
 displayuserAccountModalDisplay , 
-hideuserAccountModalDisplay} from "../app/Slices/Slices"
+hideuserAccountModalDisplay,AuthSuccessful,AuthFailed} from "../app/Slices/Slices"
 
 
 const FirstSectionNavbar = () => {
+
+  const authState = useSelector((state)=>state.Slice.AuthenticationState);
+  const dispatch = useDispatch();
   const navigate = useNavigate('/error')
 
   const [user,setUser] = useState({name:"",email:""})
@@ -53,12 +57,14 @@ const FirstSectionNavbar = () => {
       name:result.name,
       email:result.email
     })
+    dispatch(AuthSuccessful())
     }catch (error) {
      setUser({
       ...user,
       name:"Sign in",
       email:"",
      })
+     dispatch(AuthFailed())
     }
   } // handles retrive user name etc..
 
@@ -77,8 +83,6 @@ const FirstSectionNavbar = () => {
   }
   },[])
 
-
-  const dispatch = useDispatch()
   const flex = {
    alignItems:"center",
    justifyContent:"space-between",
@@ -101,7 +105,7 @@ const FirstSectionNavbar = () => {
      onMouseLeave={()=>dispatch(hideuserAccountModalDisplay())}></i> :
     <p onMouseEnter={()=>dispatch(displayuserAccountModalDisplay())} 
      onMouseLeave={()=>dispatch(hideuserAccountModalDisplay())} >{user.name}</p>}
-     <i className="fa-solid fa-cart-shopping"></i>
+     <Link to='/cart'><i className="fa-solid fa-cart-shopping"></i></Link>
      </Box>
     </Flex> {/** hidden on big screens contain user icon hab=mburger icons... */}
     <Image mt={2} w='25%' display={['none','none','block','block']} src="https://i.ibb.co/hBfNqYw/Screenshot-2024-08-28-090859.png"/>
@@ -114,7 +118,7 @@ const FirstSectionNavbar = () => {
     <Box display={['none','none','flex','flex']} w='30%' alignItems='center' justifyContent='space-around' height='4vh' mt={2}>
       <Flex sx={flex} onMouseEnter={()=>dispatch(displayuserAccountModalDisplay())} onMouseLeave={()=>dispatch(hideuserAccountModalDisplay())}><i className="fa-regular fa-user" ></i><p>{user.name}</p><i className="fa-solid fa-chevron-down"></i></Flex>
       <Flex sx={flex}><i className="fa-solid fa-headphones"></i><p>Contact Us</p><i className="fa-solid fa-chevron-down"></i></Flex>
-      <Flex sx={flex}><i className="fa-solid fa-cart-shopping"></i><p>Cart</p></Flex>
+      <Link to='/cart'><Flex sx={flex}><i className="fa-solid fa-cart-shopping"></i><p>Cart</p></Flex></Link>
     </Box> {/** second Box */}
 
    </Box>

@@ -5,13 +5,13 @@ import { Box } from '@chakra-ui/react'
 const FilterProcessor = () => {
 
   const array = [
-' Intel i9 Core',
+' Intel Core i9',
 
-' Intel i7 Core ',
+' Intel Core i7 ',
 
-' Intel i5 Core ',
+' Intel Core i5 ',
 
-' Intel i3 Core',
+' Intel Core i3',
 
 'AMD Ryzen 9',
 

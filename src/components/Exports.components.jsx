@@ -18,6 +18,7 @@ import FilterProcessor from "./ProductListingPage/Filters/FilterProcessor";
 import FIlterRam from "./ProductListingPage/Filters/FIlterRam";
 import FilterStorage from "./ProductListingPage/Filters/FilterStorage";
 import ProductLine from "./ProductListingPage/Filters/ProductLine";
+import EachCard from "./SelectedTypeComponents/EachCard";
 export {
 Navbar,
 Footer,
@@ -38,5 +39,6 @@ FilterGraphicsCard,
 FilterPrice,
 FilterProcessor,
 FilterStorage,
-ProductLine
+ProductLine,
+EachCard
 }
